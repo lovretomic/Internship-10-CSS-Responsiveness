@@ -6,6 +6,30 @@ body {
     margin: 0;
 }
 
+@font-face {
+    font-family: Mirador;
+    src: url(/fonts/mirador-bold.otf);
+}
+
+@font-face {
+    font-family: ttNorms;
+    src: url(/fonts/ttnorms-bold.otf);
+}
+
+.content-wrapper {
+    max-width: 1200px;
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: white;
+}
+
 /* BUTTONS */
 
 .button-blue {
@@ -16,10 +40,8 @@ body {
     cursor: pointer;
     padding-right: 20px;
     position: relative;
-}
-
-.button-blue:hover {
-    background-color: #89e6d9;
+    font-family: ttNorms;
+    font-size: 15px;
 }
 
 .button-blue::after {
@@ -28,27 +50,28 @@ body {
     border-left-color: white;
     position: absolute;
     top: 15px;
-    right: 25px;
+    right: 20px;
+}
+
+.button-blue:hover {
+    background-color: #89e6d9;
 }
 
 /* HEADER */
-
-.content-wrapper {
-    max-width: 1200px;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-}
 
 .header {
     width: 100%;
     height: 80px;
     background-color: #101820;
-    display: flex;
-    align-items: center;
     justify-content: center;
     padding: 15px 0;
+    position: fixed;
+    z-index: 2;
+}
+
+.header .content-wrapper {
+    display: flex;
+    justify-content: space-between;
 }
 
 .header__logo {
@@ -65,7 +88,8 @@ body {
     margin-right: 40px;
     color: white;
     text-decoration: none;
-    transition: color 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+    font-family: ttNorms;
 }
 
 .nav-item:hover {
@@ -84,9 +108,44 @@ body {
     position: absolute;
     top: 7px;
     right: 0px;
+    transition: all 200ms ease-in-out;
+}
+
+.header__navigation-dropdown:hover::after {
+    border-top-color: #89e6d9;
 }
 
 .header__navigation-button {
     height: 100%;
-    width: 170px;
+    width: 160px;
+}
+
+/* MAIN */
+
+.main__hero {
+    width: 100%;
+    min-height: 150vh;
+    background-color: #101820;
+    padding-top: 280px;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+}
+
+.main__hero .content-wrapper {
+    position: sticky;
+    bottom: 550px;
+    margin-bottom: 150px;
+}
+
+.main__hero-heading-small {
+    font-family: ttNorms;
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.main__hero-heading-large {
+    font-family: Mirador;
+    font-size: 60px;
+    color: white;
 }

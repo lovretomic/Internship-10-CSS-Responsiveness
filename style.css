@@ -249,7 +249,7 @@ section {
 
 .main__hero {
     min-height: 150vh;
-    padding-top: 420px;
+    padding-top: 220px;
     display: flex;
     align-items: flex-end;
     position: relative;
@@ -257,7 +257,7 @@ section {
 
 .main__hero .content-wrapper {
     position: sticky;
-    bottom: 250px;
+    bottom: 320px;
     margin-bottom: 150px;
 }
 

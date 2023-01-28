@@ -58,6 +58,37 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #89e6d9;
 }
 
+.button-transparent {
+    background-color: rgba(0,0,0,0);
+    border: 2px solid white;
+    color: white;
+    transition: background-color 200ms ease-in-out;
+    cursor: pointer;
+    padding-right: 20px;
+    position: relative;
+    font-family: ttNorms;
+    font-size: 15px;
+}
+
+.button-transparent::after {
+    content: "";
+    border: 10px solid transparent;
+    border-left-color: white;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.button-transparent:hover {
+    background-color: white;
+    color: #0042ce;
+}
+
+.button-transparent:hover::after {
+    border-left-color: #0042ce;
+}
+
 /* HEADER */
 
 .header {
@@ -205,20 +236,60 @@ section {
     font-family: Mirador;
     font-size: 50px;
     padding-right: 200px;
+    margin-bottom: 140px;
 }
 
 .main__features-content {
     width: 100%;
-    height: 200vh;
     display: flex;
+    /**TO REMOVE VVVV*/
+    padding-bottom: 100vh;
 }
 
 .features__content-left {
     width: 50%;
-    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.features__content-left-image {
+    position: sticky;
+    width: 550px;
+    top: 200px;
 }
 
 .features__content-right {
     width: 50%;
     height: 100%;
+    padding: 0 50px;
+}
+
+.features__content-box {
+    width: 100%;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.features__content-box:nth-of-type(2) {
+    margin: 350px 0;
+}
+
+.features__content-box-title {
+    font-family: Mirador;
+    font-size: 40px;
+}
+
+.features__content-box-subtitle {
+    font-family: ttNorms;
+    font-size: 25px;
+    margin: 30px 0;
+    line-height: 40px;
+}
+
+.features__content-box-button {
+    height: 60px;
+    width: 170px;
 }

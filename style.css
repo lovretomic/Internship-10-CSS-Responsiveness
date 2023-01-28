@@ -126,7 +126,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     min-height: 150vh;
     background-color: #101820;
-    padding-top: 280px;
+    padding-top: 420px;
     display: flex;
     align-items: flex-end;
     position: relative;
@@ -134,7 +134,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .main__hero .content-wrapper {
     position: sticky;
-    bottom: 550px;
+    bottom: 250px;
     margin-bottom: 150px;
 }
 

@@ -293,6 +293,19 @@ section {
     color: white;
 }
 
+@media screen and (max-width: 800px) {
+    .main__hero-heading-small {
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+    
+    .main__hero-heading-large {
+        font-family: Mirador;
+        font-size: 40px;
+        color: white;
+    }
+}
+
 @media screen and (max-width: 350px) {
     .main__hero-heading-small {
         font-size: 20px;
@@ -618,6 +631,42 @@ section {
     }
 }
 
+@media screen and (max-width: 450px) {
+    .main__partnerships-content {
+        width: 100%;
+        height: auto;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        overflow-y: none;
+        /*padding: 0 calc((100vw - 1200px - 30px) / 2);*/
+    }
+    
+    .partnerships__content-item {
+        height: auto;
+        width: calc(100% - 40px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0 20px;
+    }
+
+    .partnerships__content-item:not(:last-child) {
+        margin-bottom: 40px;
+    }
+    
+    .partnerships__content-item:last-child {
+        margin-right: 0;
+    }
+    
+    .partnerships__content-item-title {
+        font-family: ttNorms; 
+        color: black;
+        text-decoration: none;
+        font-size: 30px;
+    }
+}
+
 @media screen and (max-width: 350px) {
     .main__partnerships-header {
         flex-direction: column;
@@ -633,6 +682,7 @@ section {
     width: 100%;
     display: flex;
     margin-top: 100px;
+    padding-bottom: 100px;
 }
 
 .footer .content-wrapper {
@@ -694,10 +744,25 @@ section {
     width: 100%;
     height: 60px;
     margin-bottom: 30px;
+    position: relative;
 }
 
 .footer__column-button::after {
-    right: 40px;
+    right: calc(50% - 60px);
+}
+
+.footer__column:last-of-type .footer__column-link {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.footer__column-paragraph {
+    font-family: ttNormsLight;
+    margin: 0;
+}
+
+.footer__column-paragraph:first-of-type {
+    margin-top: 30px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -737,4 +802,9 @@ section {
         flex-direction: column;
         padding-right: 0;
     }
+
+    .footer__column-title:not(:first-of-type) {
+        margin-top: 30px
+    }
+    
 }
